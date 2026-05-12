@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+#SBATCH --job-name=hurr
+#SBATCH --output=out.%J
+#SBATCH --error=err.%J
+#SBATCH -n 1
+#SBATCH -p lowpri
+#SBATCH --mem-per-cpu=16G
+#SBATCH --time=02:00:00
+
+#python plot_ssh_uv_diff.py
+#python plot_sst_diff.py
+#python plot_ssh_uv.py
+#python plot_sst_residual.py
+#python plot_uv_diff_all.py
+#python plot_ssh_cmems.py
+#python plot_ssh_glorys.py
+#python process_extract_CE.py
+python plot_sect_ce_all.py
